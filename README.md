@@ -1,93 +1,65 @@
-#include <WiFi.h>
-#include <ESP32WebServer.h>
-#include <BlynkSimpleEsp32.h>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Merienda&pause=1000&center=true&random=false&width=1000&lines=Welcome+To;IoT;Robotics;Embedded+Systems" alt="Typing SVG" /></a>
 
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
+<h3 align="center">Repo Of Robotics and IoT</h3>
 
-const char* authToken = "YOUR_AUTH_TOKEN";
 
-ESP32WebServer server(80);
+<p align="center">
+    <img src="https://img.shields.io/github/stars/Ddhruv-IOT/Embedded-Systems?style=for-the-badge&color=orange">
+    <img src="https://img.shields.io/github/contributors/Ddhruv-IOT/Embedded-Systems?style=for-the-badge&color=cyan">
+<br>
+    <img src="https://img.shields.io/badge/Maintained-Yes-cyan?style=flat-square">
+    <img src="https://img.shields.io/badge/Made%20In-India-green?style=flat-square">
+<br>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Ddhruv-IOT&repo=Embedded-Systems&theme=synthwave">
+</p>
 
-BlynkSimpleEsp32 blynk;
+## TECH STACK USED
+<p align="left">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=cpp,py" />
+  </a>
+</p>
 
-Servo baseServo;
-Servo shoulderServo;
-Servo elbowServo;
-Servo wristServo;
-Servo wristRotateServo;
-Servo gripperServo;
 
-int basePos = 90;
-int shoulderPos = 90;
-int elbowPos = 90;
-int wristPos = 90;
-int wristRotatePos = 90;
-int gripperPos = 90;
+## :star2: About the Project
 
-void setup() {
-  Serial.begin(9600);
+Welcome to our Embedded-Systems project repository, where we explore the fascinating world of IoT using C++ and Python.
+This repository is a dedicated space for our IoT and Embedded-Systems related code and projects, offering a versatile platform for IoT enthusiasts, hobbyists, and developers to delve into the exciting possibilities of connected devices.
 
-  WiFi.begin(ssid, password);
+Whether you're looking to connect IoT devices, process data, or develop applications that bridge the gap between hardware and software, you'll find valuable resources and examples here.
+We aim to provide a seamless experience for all skill levels, from beginners to experienced developers.
 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.println("Connecting to WiFi...");
-  }
+Explore our code, experiment with Embedded-System's concepts, and join us in the journey of unlocking the potential of the Internet of Things.
 
-  baseServo.attach(13);
-  shoulderServo.attach(14);
-  elbowServo.attach(15);
-  wristServo.attach(16);
-  wristRotateServo.attach(17);
-  gripperServo.attach(18);
 
-  blynk.begin(authToken);
+### 💥 How to contribute
+- Take a look at the existing [Issues](https://github.com/Ddhruv-IOT/Embedded-Systems/issues) or [create a new issue](https://github.com/Ddhruv-IOT/Embedded-Systems/issues/new)!
+- [Fork the Repo](https://github.com/Ddhruv-IOT/Embedded-Systems/fork). Then, create a branch for any issue that you are working on. Finally, commit your work.
+- Create a **[Pull Request](https://github.com/Ddhruv-IOT/Embedded-Systems/compare)** (_PR_), which will be promptly reviewed and given suggestions for improvements by the community.
+- Add screenshots or screen captures to your Pull Request to help us understand the effects of the changes proposed in your PR.
+- **DON'T CREATE PRs WITHOUT CREATING ISSUE AND GETTING ASSIGNED**
 
-  blynk.attachPin(V1, baseServo);
-  blynk.attachPin(V2, shoulderServo);
-  blynk.attachPin(V3, elbowServo);
-  blynk.attachPin(V4, wristServo);
-  blynk.attachPin(V5, wristRotateServo);
-  blynk.attachPin(V6, gripperServo);
-}
 
-BLYNK_WRITE(V1) {
-  int value = param.asInt();
-  basePos = value;
-  baseServo.write(value);
-}
+### Installation
 
-BLYNK_WRITE(V2) {
-  int value = param.asInt();
-  shoulderPos = value;
-  shoulderServo.write(value);
-}
+1. Clone the repo
 
-BLYNK_WRITE(V3) {
-  int value = param.asInt();
-  elbowPos = value;
-  elbowServo.write(value);
-}
+```bash
+git clone https://github.com/Ddhruv-IOT/Embedded-Systems.git
+```
 
-BLYNK_WRITE(V4) {
-  int value = param.asInt();
-  wristPos = value;
-  wristServo.write(value);
-}
+2. Open files in any code editor
 
-BLYNK_WRITE(V5) {
-  int value = param.asInt();
-  wristRotatePos = value;
-  wristRotateServo.write(value);
-}
+3. Have fun!
 
-BLYNK_WRITE(V6) {
-  int value = param.asInt();
-  gripperPos = value;
-  gripperServo.write(value);
-}
 
-void loop() {
-  blynk.run();
-}
+## :wave: Contributors
+<a href="https://github.com/Ddhruv-IOT/Embedded-Systems/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Ddhruv-IOT/Embedded-Systems" />
+</a>
+
+<a href="https://github.com/Ddhruv-IOT/Embedded-Systems.git/graphs/contributors"> <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" /> </a>
+
+Contributors are always welcome!
+
+
