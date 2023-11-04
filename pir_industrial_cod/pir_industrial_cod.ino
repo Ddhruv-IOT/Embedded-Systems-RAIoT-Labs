@@ -1,50 +1,3 @@
-// const int pirPin = 12;
-// const int ledPin = 13;
-// const int buzzerPin = 11;
-
-// unsigned long previousMillis = 0;
-// const long interval = 200;
-
-// void setup() {
-//   pinMode(pirPin, INPUT);
-//   pinMode(ledPin, OUTPUT);
-//   pinMode(buzzerPin, OUTPUT);
-
-//   digitalWrite(ledPin, LOW);
-//   digitalWrite(buzzerPin, LOW);
-
-//   Serial.begin(9600);
-//   Serial.println("Hello");
-// }
-
-// int prev_state = -1;
-// int cut_counter = 1;
-
-// void loop() {
-//   int state = digitalRead(pirPin);
-//   Serial.println(state);
-
-//   if (state == 1) {
-//     digitalWrite(ledPin, HIGH);
-//     prev_state = 1;
-//     cut_counter = 1;
-//   } else {
-//     if (prev_state == 1 && cut_counter <= 3) {
-//       for (int i = 0; i < 3; i++) {
-//         digitalWrite(buzzerPin, HIGH);
-//         delay(500);
-//         digitalWrite(buzzerPin, LOW);
-//         delay(500);
-//       }
-//       cut_counter++;
-//     } else {
-//       digitalWrite(ledPin, LOW);
-//       digitalWrite(buzzerPin, LOW);
-//     }
-//   }
-// }
-
-
 const int pirPin = 12;
 const int ledPin = 13;
 const int buzzerPin = 11;
@@ -78,12 +31,6 @@ void loop() {
     cut_counter = 1;
   } else {
     if (prev_state == 1 && cut_counter <= 3 && digitalRead(pirPin) == 0) {
-      // for (int i = 0; i < 3; i++) {
-      //   digitalWrite(buzzerPin, HIGH);
-      //   delay(500);
-      //   digitalWrite(buzzerPin, LOW);
-      //   delay(500);
-      // }
 
       unsigned long currentMillis = millis();
 
