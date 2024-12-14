@@ -1,3 +1,4 @@
+# Archived as of 15-Dec-2024, Thank you!🙋‍♂️👋
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Merienda&pause=1000&center=true&random=false&width=1000&lines=Welcome+To;IoT;Robotics;Embedded+Systems" alt="Typing SVG" /></a>
 
 <h3 align="center">Repo Of Robotics and IoT</h3>
